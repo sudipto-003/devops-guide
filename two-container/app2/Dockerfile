@@ -6,4 +6,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirments.txt
 
 COPY ./api /code/app
 
-CMD ["gunicorn", "app.main:app", "--bind", "0.0.0.0:3000"]
+CMD ["gunicorn", "app.main:app", "--reload", "--bind", "0.0.0.0:3000"]
