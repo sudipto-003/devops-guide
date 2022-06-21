@@ -14,6 +14,6 @@ def getFromNode():
     session.mount('http', adapter)
 
     wel = session.get('http://nodeexp:8080').text
-    data = time.time()
+    data = time.time().hex()
 
-    return {'node': wel, 'python': data}
+    return {'node': wel, 'python': data, 'hex': True, 'flag': 'App2', 'TTL': 'ttl_enotuniq'}

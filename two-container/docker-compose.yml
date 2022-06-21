@@ -4,6 +4,10 @@ services:
     image: flask1
     ports:
       - "3000:3000"
+    volumes:
+      - ./app2/api:/code/app
+    environment:
+      FLASK_ENV: development
     links:
       - nodeexp
   nodeexp:
