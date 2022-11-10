@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: frontend1
+  template:
+    metadata:
+      labels:
+        app: frontend1
+    spec:
+      containers:
+      - name: react1
+        image: sudipto003/dummy-react:production
+        ports:
+        - containerPort: 80
